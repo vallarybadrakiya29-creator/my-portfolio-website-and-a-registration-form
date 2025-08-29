@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #2a5298;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #2a5298;
+      outline: none;
+      box-shadow: 0 0 8px rgba(42,82,152,0.3);
+    }
+
+    .gender-container, .hobbies-container {
+      margin-bottom: 16px;
+    }
+
+    .gender-container label, .hobbies-container label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #2a5298;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e3c72;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form action="submit_form.php" method="post">
+      
+      <!-- Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <!-- Address -->
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+      <!-- Date of Birth -->
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <!-- Gender -->
+      <div class="gender-container">
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+      </div>
+
+      <!-- Hobbies -->
+      <div class="hobbies-container">
+        <label>Hobbies:</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="writing" name="hobbies" value="Writing">
+        <label for="writing">Writing</label>
+	<input type="checkbox" id="sports" name="hobbies" value="Sports">
+        <label for="sports">Sports</label><br>
+	<input type="checkbox" id="dancing" name="hobbies" value="Dancing">
+        <label for="dancing">Dancing</label>
+	<input type="checkbox" id="singing" name="hobbies" value="Singing">
+        <label for="singing">Singing</label>
+	<input type="checkbox" id="drawing" name="hobbies" value="Drawing">
+        <label for="drawing">Drawing</label><br>
+        <input type="checkbox" id="traveling" name="hobbies" value="Traveling">
+        <label for="traveling">Traveling</label>
+	<input type="checkbox" id="photography" name="hobbies" value="Photography">
+        <label for="photography">Photography</label>
+        <input type="checkbox" id="music" name="hobbies" value="Music">
+        <label for="music">Music</label>
+	
+      </div>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <!-- Phone -->
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+
+      <!-- Submit -->
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
